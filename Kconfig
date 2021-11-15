@@ -1,0 +1,113 @@
+
+config ADSUM_NETWORKS_SDK
+	bool "Adsum Networks SDK Support"
+	help
+        Enable Zephyr Integration with the Adsum Networks SDK
+
+
+config ADSUM_COMPANY_ID #-
+	hex #"Adsum Comany ID"
+	default 0x05F1 #BT_COMP_ID_LF
+
+config ADSUM_OP_KEEPALIVE_MSG_MAXLEN_MESSAGE 
+ 	int "Adsum KeepAlive message maximal message lenght"
+ 	default 2
+
+config ADSUM_KEEPALIVE_MODEL_ID #-
+ 	hex #"Adsum KeepAlive Model ID"
+ 	default 0x0000
+
+config ADSUM_OP_KEEPALIVE_MSG_ID #H
+	hex #"ADSUM_OP_KEEPALIVE_MSG_ID"
+	default 0x00
+
+
+config ADSUM_KEEPALIVE_MODEL_PERFNODE_SIGN #-
+	int #"Adsum KeepAlive Model PerfNode SIGN"
+	default 101
+
+config ADSUM_KEEPALIVE_MODEL_SIGN #-
+	hex #"Adsum KeepAlive Model SIGN"
+	default 0x77
+
+config ADSUM_KEEPALIVE_GROUP_ADDR #-
+	hex "Adsum Keepalive Model group address"
+	default 0xc000
+	help
+        Group address where the KeepAlive message is published.
+	
+config ADSUM_KEEPALIVE_MODEL_PUBLISH_TTL #-
+	int "Adsum Keepalive Model publish TTL" 
+	default 0
+
+config ADSUM_KEEPALIVE_MODEL_RECEIVED_TTL #-
+	int "Adsum Keepalive Model receiced TTL" 
+	default 0  
+
+config  ADSUM_ADDRS_RSSI_LIST_SIZE  
+	int "Size of the node neighbors list"
+	default 50 
+	help
+        Set the size of the list which contains all node neighbors addresses and their RSSI.
+
+config ADSUM_PERF_GROUP_ADDR #-
+	hex "Adsum Perfermance Model Group address"
+	default 0xc001
+	help
+        Group address where the performance model messages are published.
+
+config ADSUM_OP_PERF_UPDATE_MAXLEN_MESSAGE 
+ 	int "Adsum Performance message maximum length"
+ 	default	100 
+
+config ADSUM_PERF_SRV_MODEL_ID #-
+ 	hex #"Adsum Perfermance Model server model id"
+ 	default 0x0001
+
+config ADSUM_PERF_SRV_MODEL_SIGN #-
+	hex #"Adsum Perfermance Model SIGNateur"
+	default 0x79
+
+config ADSUM_KEEPALIVE_MODEL_PUB_PERIOD_10S_MULTIPLIER #-
+	int "Adsum Keepalive message Publication period (10 seconds multiplier)"
+	default  2
+	help
+        Set the 10 seconds multiplier of Adsum Keepalive message Publication period, 
+		which means that the period equal the given value multiplied by 10.
+
+
+config ADSUM_KEEPALIVE_MODEL_PUB_RETRANSMIT_NMBR #-
+	int "Adsum Keepalive message retransmission number"
+	default 0
+	help
+        Set the retransmission number for the Keepalive message.
+
+config ADSUM_KEEPALIVE_MODEL_PUB_RETRANSMIT_INTER #-
+	int "Adsum Keepalive message retransmission interval"
+	default 0
+	help
+        Set the retransmission interval for the Keepalive message.
+
+config ADSUM_OP_PERF_UPDATE_MSG_ID #-
+	hex #"ADSUM_OP_PERF_UPDATE_MSG_ID"
+	default 0x02
+
+config ADSUM_PERF_SRV_MODEL_PUB_PERIOD_10S_MULTIPLIER #-
+	int "Adsum performance server model message Publication period (10 seconds multiplier)"
+	default 5
+	help
+        Set the 10 seconds multiplier of Adsum performance message Publication period, 
+		which means that the period equals the given value multiplied by 10.
+
+config ADSUM_PERF_SRV_MODEL_PUB_RETRANSMIT_NMBR#-
+	int "Set the number of the retransmission for Adsum performance message"
+	default 0
+	help
+        Set the retransmission number for the performance message.
+
+config ADSUM_PERF_SRV_MODEL_PUB_RETRANSMIT_INTER #-
+	int "Adsum performance message retransmission interval"
+	default 0
+	help
+        Set the retransmission interval for the performance message.
+
